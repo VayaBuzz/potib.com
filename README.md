@@ -1,2 +1,2 @@
 # potib.com
-Price of Things in Bitcoinz
+Price of Things in Bitcoin
