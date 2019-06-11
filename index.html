@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="bitcoin, international, crypto, cryptocurrency, prices, shopping, ethereum" />
+    <meta name="description" content="PoTiB.com - Common goods and services priced at this moment's Bitcoin value.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PoTiB - Price of Things in Bitcoin - BTC bananas cost Ƀ</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css">
+    
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+  </head>
+  
+  <!--       -->
+  <!-- body  -->
+  <!--       -->
+  
+  <body id="myID" class="myId-alternate" ng-app="demo">
+    <!-- Add your site or app content here -->
+
+
+ 
+    <div><h1>
+    PoTiB</h1>
+    </div>
+    <div>
+    Prices of Things in Bitcoin
+    </div>
+    
+    <div>
+    Common goods and services priced at this moment's Bitcoin value.
+    </div>
+  
+    <br>
+    <div ng-controller="repeatController">
+			One Bitcoin = {{myRate}} {{myCurrencyOrig}}
+    
+    
+    <!-- Click on flag to change to items popular in that country -->
+    <div class="f32">
+      <span class="flag gb" ng-click='clickHandle("gb")'></span>
+      <span class="flag us" ng-click='clickHandle("us")'></span>
+      <span class="flag de" ng-click='clickHandle("de")'></span>
+    </div>
+    
+    <br>
+    <div>
+      The "mɃ" symbol is milliBitcoin, or 1/1000th of a Bitcoin, for easy readability.
+    </div>
+
+
+      <div class="animate-repeat" ng-repeat="item in items | filter:q as results">
+        
+        <div class="itemImage">
+          <img src={{item.art}} style="width: 100px; height: 100px" >
+        </div>
+      
+        <div class="itemDesc" style="margin-top: 0px;">
+          {{item.name}}
+        </div>
+      
+        <div class="itemPrice">
+          <span class="milliBitcoin">{{item.priceCrypto}}</span>
+        </div>
+        
+      </div>
+    </div>
+  
+    
+    <div class="footer">
+      Bitcoin value courtesy of <a href="http://www.coindesk.com/price/">CoinDesk</a>
+    <br>
+      Designed by <a href="http://coffey.buzz">Patrick Coffey</a>
+    </div>
+    <br>
+    
+    
+    <div>
+    <script src="https://gateway.gear.mycelium.com/gear-widget-host.js"></script>
+<iframe id="gear-widget" scrolling="no" src="https://gateway.gear.mycelium.com/widgets/4eac76fce8c13aae77e9b39581407eb0f24fd3a7861bcb47cd3d91dd13a1a703" style="border: none; display: inline-block; height: 130px; min-width: 250px; max-width: 350px;"></iframe>
+    </div>
+    
+         
+    
+    <!-- Scripts -->
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-94081012-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Built with love using Web Starter Kit -->
+  </body>
+</html>
